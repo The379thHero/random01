@@ -1,0 +1,10 @@
+{
+    "name": "random01",
+    "version": "1.0.0",
+    "manifest_version": 1,
+    "project_type": "application",
+    "executable_type": "scratch",
+    "executable": "random01.xml",
+    "author": "The379thHero",
+    "minimum_firmware_version": 42
+}

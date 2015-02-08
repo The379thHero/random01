@@ -10,7 +10,7 @@
         </value>
         <statement name="DO">
           <block type="controls_if" id="65" inline="false">
-            <mutation elseif="2" else="1"></mutation>
+            <mutation elseif="4" else="1"></mutation>
             <value name="IF0">
               <block type="logic_compare" id="72" inline="true">
                 <field name="OP">GT</field>
@@ -75,6 +75,42 @@
                   </block>
                 </value>
               </block>
+            </statement>
+            <value name="IF3">
+              <block type="logic_compare" id="236" inline="true">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="sensor_object" id="250">
+                    <field name="OBJECT">LEFTFRONT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="257">
+                    <field name="NUM">80</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO3">
+              <block type="movement_right" id="267"></block>
+            </statement>
+            <value name="IF4">
+              <block type="logic_compare" id="243" inline="true">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="sensor_object" id="274">
+                    <field name="OBJECT">RIGHTFRONT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="281">
+                    <field name="NUM">80</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO4">
+              <block type="movement_left" id="291"></block>
             </statement>
             <statement name="ELSE">
               <block type="movement_setmotors" id="183" inline="true">

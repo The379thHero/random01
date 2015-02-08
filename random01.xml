@@ -129,7 +129,39 @@
           </block>
         </statement>
         <next>
-          <block type="movement_stop" id="193"></block>
+          <block type="movement_stutter" id="301">
+            <next>
+              <block type="robot_delay" id="303" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="310">
+                    <field name="NUM">5000</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="oled_setcursor" id="331" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="338">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="345">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_drawtext" id="354">
+                        <field name="TEXT">Hello</field>
+                        <next>
+                          <block type="movement_stop" id="193"></block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
         </next>
       </block>
     </next>
